@@ -1,17 +1,13 @@
-name: Execucao da suite de testes - Samurai Barber Shop
-on:
-  schedule:
-    - cron: '00 05 * * *'
-  push: 
-    branches:
-      - main
+name: With servers
+on: push
 jobs:
-  install:
+  cypress-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: cypress.io
+      - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          record: true
+          start: npm run api, npm run web
+          wait-on: 'http://localhost:3000'
