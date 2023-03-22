@@ -5,7 +5,7 @@ module.exports = defineConfig({
     baseUrl: 'http://localhost:3000',
     viewportWidth: 1366,
     viewportHeight: 768,
-
+    
     setupNodeEvents(on, config) {
 
       const { Pool } = require('pg')
@@ -29,7 +29,7 @@ module.exports = defineConfig({
           })
         }
       })
-      
+
     },
   },
 });

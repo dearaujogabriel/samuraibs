@@ -99,7 +99,7 @@ describe('Valida pagina de cadastro', () => {
         })
     })
 
-    context.only('quando nao preencho nenhum dos campos', () => {
+    context('quando nao preencho nenhum dos campos', () => {
         const alertMessages = [
             'Nome é obrigatório',
             'E-mail é obrigatório',
